@@ -1,0 +1,207 @@
+{
+  "nodes": [
+    {
+      "id": "HUB1",
+      "type": "DISTRIBUTOR",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "HUB2",
+      "type": "DISTRIBUTOR",
+      "x": 450,
+      "y": 50
+    },
+    {
+      "id": "CHARGE1",
+      "type": "CHARGING",
+      "x": 150,
+      "y": 100
+    },
+    {
+      "id": "CHARGE2",
+      "type": "CHARGING",
+      "x": 250,
+      "y": 200
+    },
+    {
+      "id": "CHARGE3",
+      "type": "CHARGING",
+      "x": 350,
+      "y": 100
+    },
+    {
+      "id": "CHARGE4",
+      "type": "CHARGING",
+      "x": 250,
+      "y": 300
+    },
+    {
+      "id": "DEL1",
+      "type": "DELIVERY",
+      "x": 100,
+      "y": 250
+    },
+    {
+      "id": "DEL2",
+      "type": "DELIVERY",
+      "x": 200,
+      "y": 350
+    },
+    {
+      "id": "DEL3",
+      "type": "DELIVERY",
+      "x": 300,
+      "y": 350
+    },
+    {
+      "id": "DEL4",
+      "type": "DELIVERY",
+      "x": 400,
+      "y": 250
+    },
+    {
+      "id": "DEL5",
+      "type": "DELIVERY",
+      "x": 450,
+      "y": 350
+    }
+  ],
+  "edges": [
+    {
+      "from": "HUB1",
+      "to": "CHARGE1",
+      "energy": 60,
+      "capacity": 8,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "HUB2",
+      "to": "CHARGE3",
+      "energy": 60,
+      "capacity": 8,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "CHARGE1",
+      "to": "CHARGE2",
+      "energy": 70,
+      "capacity": 5,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "CHARGE2",
+      "to": "CHARGE3",
+      "energy": 70,
+      "capacity": 5,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "CHARGE1",
+      "to": "DEL1",
+      "energy": 80,
+      "capacity": 4,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "CHARGE2",
+      "to": "DEL1",
+      "energy": 90,
+      "capacity": 3,
+      "bidirectional": true,
+      "restricted": true
+    },
+    {
+      "from": "CHARGE2",
+      "to": "CHARGE4",
+      "energy": 50,
+      "capacity": 6,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "CHARGE4",
+      "to": "DEL2",
+      "energy": 60,
+      "capacity": 4,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "CHARGE4",
+      "to": "DEL3",
+      "energy": 55,
+      "capacity": 4,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "CHARGE3",
+      "to": "DEL4",
+      "energy": 80,
+      "capacity": 4,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "DEL4",
+      "to": "DEL5",
+      "energy": 65,
+      "capacity": 3,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "DEL1",
+      "to": "DEL2",
+      "energy": 70,
+      "capacity": 2,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "DEL2",
+      "to": "DEL3",
+      "energy": 50,
+      "capacity": 2,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "CHARGE3",
+      "to": "CHARGE4",
+      "energy": 120,
+      "capacity": 2,
+      "bidirectional": false,
+      "restricted": false
+    }
+  ],
+  "polygons": [
+    {
+      "id": "NFZ1",
+      "name": "Restricted Airspace Alpha",
+      "points": [
+        {"x": 180, "y": 120},
+        {"x": 220, "y": 100},
+        {"x": 240, "y": 140},
+        {"x": 200, "y": 160}
+      ]
+    },
+    {
+      "id": "NFZ2",
+      "name": "Restricted Airspace Beta",
+      "points": [
+        {"x": 320, "y": 200},
+        {"x": 380, "y": 180},
+        {"x": 400, "y": 220},
+        {"x": 380, "y": 260},
+        {"x": 330, "y": 240}
+      ]
+    }
+  ]
+}

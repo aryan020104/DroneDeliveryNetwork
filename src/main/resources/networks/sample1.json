@@ -1,0 +1,99 @@
+{
+  "nodes": [
+    {
+      "id": "HUB1",
+      "type": "DISTRIBUTOR",
+      "x": 100,
+      "y": 100
+    },
+    {
+      "id": "CHARGE1",
+      "type": "CHARGING",
+      "x": 200,
+      "y": 150
+    },
+    {
+      "id": "CHARGE2",
+      "type": "CHARGING",
+      "x": 300,
+      "y": 100
+    },
+    {
+      "id": "DEL1",
+      "type": "DELIVERY",
+      "x": 250,
+      "y": 250
+    },
+    {
+      "id": "DEL2",
+      "type": "DELIVERY",
+      "x": 400,
+      "y": 200
+    },
+    {
+      "id": "DEL3",
+      "type": "DELIVERY",
+      "x": 350,
+      "y": 50
+    }
+  ],
+  "edges": [
+    {
+      "from": "HUB1",
+      "to": "CHARGE1",
+      "energy": 50,
+      "capacity": 5,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "HUB1",
+      "to": "CHARGE2",
+      "energy": 80,
+      "capacity": 3,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "CHARGE1",
+      "to": "DEL1",
+      "energy": 60,
+      "capacity": 4,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "CHARGE1",
+      "to": "CHARGE2",
+      "energy": 40,
+      "capacity": 6,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "CHARGE2",
+      "to": "DEL2",
+      "energy": 55,
+      "capacity": 4,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "CHARGE2",
+      "to": "DEL3",
+      "energy": 45,
+      "capacity": 3,
+      "bidirectional": true,
+      "restricted": false
+    },
+    {
+      "from": "DEL1",
+      "to": "DEL2",
+      "energy": 70,
+      "capacity": 2,
+      "bidirectional": true,
+      "restricted": false
+    }
+  ],
+  "polygons": []
+}
